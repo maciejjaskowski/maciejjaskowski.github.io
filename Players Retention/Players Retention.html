@@ -5,8 +5,7 @@
     <link rel='stylesheet' href='http://timelyportfolio.github.io/rCharts_d3_sankey/css/sankey.css'>
     
     <script src='http://d3js.org/d3.v3.min.js' type='text/javascript'></script>
-
-    <script>
+       <script>
 d3.sankey = function() {
   var sankey = {},
       nodeWidth = 24,
@@ -172,7 +171,7 @@ d3.sankey = function() {
     //
     var nodesByBreadth = d3.nest().key(function(d) { console.log(d); return d.x; }).sortKeys(d3.ascending) 
       .entries(nodes)
-      .map(function(d) { return d.values; }) //.sort(function(a,b) { console.log(a.name, b.name); var x =  a.name.localeCompare(b.name); console.log(x); return x; }) })
+      .map(function(d) { return d.values.sort(function(a,b) { console.log(a.name, b.name); var x =  a.name.localeCompare(b.name); console.log(x); return x; }) })
       
     if (nodesByBreadth[0]) {
       console.log(JSON.stringify(nodesByBreadth[0][0].name))
@@ -313,7 +312,7 @@ d3.sankey = function() {
 };
 
     </script>
-    
+ 
     <style>
     .rChart {
       display: block;
@@ -327,7 +326,7 @@ d3.sankey = function() {
   </head>
   <body >
     
-    <div id = 'chartb991093ffe' class = 'rChart d3_sankey'></div>    
+    <div id = 'chartb9931ef32d3' class = 'rChart d3_sankey'></div>    
     <!--Attribution:
 Mike Bostock https://github.com/d3/d3-plugins/tree/master/sankey
 Mike Bostock http://bost.ocks.org/mike/sankey/
@@ -336,20 +335,20 @@ Mike Bostock http://bost.ocks.org/mike/sankey/
 <script>
 (function(){
 var params = {
- "dom": "chartb991093ffe",
+ "dom": "chartb9931ef32d3",
 "width":    960,
 "height":    500,
 "data": {
- "source": [ "Fall.2012.U8", "Fall.2012.notPlaying", "Fall.2012.U8", "Fall.2012.notPlaying", "Fall.2012.U8", "Fall.2012.notPlaying", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.notPlaying", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.notPlaying", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.notPlaying", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.notPlaying", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.notPlaying", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.notPlaying" ],
-"target": [ "Fall.2013.U9.Rec", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.U9.Jr.Select", "Fall.2013.notPlaying", "Fall.2013.notPlaying", "Fall.2014.U10.Rec", "Fall.2014.U10.Rec", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.U10.Jr.Select", "Fall.2014.U10.Jr.Select", "Fall.2014.notPlaying", "Fall.2014.notPlaying", "Fall.2014.notPlaying", "Fall.2015.U11.Rec", "Fall.2015.U11.Rec", "Fall.2015.U11.Rec", "Fall.2015.U11.Competitive", "Fall.2015.U11.Competitive", "Fall.2015.U11.Competitive", "Fall.2015.notPlaying", "Fall.2015.notPlaying", "Fall.2015.notPlaying" ],
-"value": [ 17, 13, 108, 24, 97, 55, 10, 9, 23, 1, 71, 44, 19, 53, 85, 20, 8, 1, 4, 71, 1, 18, 37, 155 ] 
+ "source": [ "Fall.2012.U8.All", "Fall.2012.U8._new", "Fall.2012.U8._notPlaying", "Fall.2012.U8.All", "Fall.2012.U8._new", "Fall.2012.U8._notPlaying", "Fall.2012.U8.All", "Fall.2012.U8._new", "Fall.2012.U8._notPlaying", "Fall.2012.U8.All", "Fall.2012.U8._new", "Fall.2012.U8._notPlaying", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.U9._notPlaying", "Fall.2013.U9._new", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.U9._notPlaying", "Fall.2013.U9._new", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.U9._notPlaying", "Fall.2013.U9._new", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.U9._notPlaying", "Fall.2013.U9._new", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.U10._notPlaying", "Fall.2014.U10._new", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.U10._notPlaying", "Fall.2014.U10._new", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.U10._notPlaying", "Fall.2014.U10._new" ],
+"target": [ "Fall.2013.U9.Rec", "Fall.2013.U9.Rec", "Fall.2013.U9.Rec", "Fall.2013.U9.Jr.Select", "Fall.2013.U9.Jr.Select", "Fall.2013.U9.Jr.Select", "Fall.2013.U9._notPlaying", "Fall.2013.U9._notPlaying", "Fall.2013.U9._notPlaying", "Fall.2013.U9._new", "Fall.2013.U9._new", "Fall.2013.U9._new", "Fall.2014.U10.Rec", "Fall.2014.U10.Rec", "Fall.2014.U10.Rec", "Fall.2014.U10.Rec", "Fall.2014.U10.Jr.Select", "Fall.2014.U10.Jr.Select", "Fall.2014.U10.Jr.Select", "Fall.2014.U10.Jr.Select", "Fall.2014.U10._notPlaying", "Fall.2014.U10._notPlaying", "Fall.2014.U10._notPlaying", "Fall.2014.U10._notPlaying", "Fall.2014.U10._new", "Fall.2014.U10._new", "Fall.2014.U10._new", "Fall.2014.U10._new", "Fall.2015.U11.Rec", "Fall.2015.U11.Rec", "Fall.2015.U11.Rec", "Fall.2015.U11.Rec", "Fall.2015.U11.Competitive", "Fall.2015.U11.Competitive", "Fall.2015.U11.Competitive", "Fall.2015.U11.Competitive", "Fall.2015.U11._notPlaying", "Fall.2015.U11._notPlaying", "Fall.2015.U11._notPlaying", "Fall.2015.U11._notPlaying" ],
+"value": [ 17, 13, 0, 108, 24, 0, 97, 0, 26, 0, 0, 55, 10, 9, 5, 18, 1, 71, 7, 37, 19, 53, 85, 0, 0, 0, 26, 0, 20, 8, 1, 24, 4, 71, 1, 2, 18, 37, 155, 0 ] 
 },
 "nodeWidth":     15,
 "nodePadding":     10,
 "layout":     32,
 "units": "players",
 "title": "Retention",
-"id": "chartb991093ffe" 
+"id": "chartb9931ef32d3" 
 };
 
 params.units ? units = " " + params.units : units = "";
@@ -468,10 +467,10 @@ node.append("text")
     
     
     <script>
-      var cscale = d3.scale.category20();
+      var cscale = d3.scale.category10();
       var r = new RegExp("[^.]+.[^.]+.[^.]+.([^.]+).?.*")
       // to be specific in case you have more than one chart
-      d3.selectAll('#chartb991093ffe svg path.link')
+      d3.selectAll('#chartb9931ef32d3 svg path.link')
         .style('stroke', function(d){
           //here we will use the source color
           //if you want target then sub target for source
@@ -486,7 +485,7 @@ node.append("text")
        //so will need to define mouseover and mouseout
        //happy to show how to do this also
        // .style('stroke-opacity', .7)
-      d3.selectAll('#chartb991093ffe svg .node rect')
+      d3.selectAll('#chartb9931ef32d3 svg .node rect')
         .style('fill', function(d){
     
           var m = d.name.match(r)
