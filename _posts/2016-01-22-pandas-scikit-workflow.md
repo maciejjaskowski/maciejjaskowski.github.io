@@ -10,7 +10,7 @@ Python + [Scikit](http://scikit-learn.org/stable/) + [Pandas](http://pandas.pyda
 
 I will present here how I prefer structuring my explorative Python scripts using [`Pipeline`](http://scikit-learn.org/stable/modules/generated/sklearn.pipeline.Pipeline.html), [`sklearn.preprocessing.*`](scikit-learn.org/stable/modules/preprocessing.html), `Pandas` dataframes and [`sklearn-pandas`](https://github.com/paulgb/sklearn-pandas) bridge library.
 
-If you want to play with the code, go ahead and download the .ipynb source of this blogpost.
+If you want to play with the code, go ahead and download [the .ipynb source](https://github.com/maciejjaskowski/maciejjaskowski.github.io/blob/master/_posts/Blog%20on%20Scikit%20and%20Pandas.ipynb) of this blogpost.
 
 # Preprocessing
 
@@ -255,7 +255,7 @@ ggplot(df) +
 {% endhighlight %}
 
 
-![png](output_31_0.png)
+![png]({{ site.url }}/assets/2016-01-26-pandas-scikit-workflow-1.png)
 
 
 # Summary
