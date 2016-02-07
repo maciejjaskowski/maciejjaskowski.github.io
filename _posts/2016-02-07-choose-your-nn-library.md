@@ -8,7 +8,6 @@ title: Choose your Neural Network Library
 ## Tl;dr
 
 | Library    	| Language   	| Documentation 	| Abstraction level             	| Extensibility 	| Open sourced by 	|
-|------------	|------------	|---------------	|-------------------------------	|---------------	|-----------------	|
 | [Caffe](caffe.berkeleyvision.org)     	| Python/C++ 	| poor          	| Layers (defined in txt files) 	| CuDNN         	| BerkeleyVision  	|
 | [Lasagne](http://lasagne.readthedocs.org/)    	| Python     	| good          	| Layers (combined in Python)   	| Python and Theano 	| Community       	|
 | [Keras](https://github.com/fchollet/keras/)         | Python        | good                  | Layers (combined in Python)           | Python and (Theano or TensorFlow) | Community |
