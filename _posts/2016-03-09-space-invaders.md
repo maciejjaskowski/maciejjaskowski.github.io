@@ -127,7 +127,7 @@ Average game reward (600 games) after N games played. Blue line is random strate
 
 #Algorithm
 So what is Deep Q-Learning (DQN)? Below you will find a gentle introduction. I omit certain details for the sake of simplicity
-and I encourage you to read the <a href="http://deeplearning.net/software/theano/extending/unittest.html">original paper</a>. 
+and I encourage you to read the <a href="https://storage.googleapis.com/deepmind-data/assets/papers/DeepMindNature14236Paper.pdf">original paper</a>. 
 
 The task for Neural Network in DQN is to learn which action to take based on the screen and previous experience. Obviously the nueral network should choose the best action but how to learn which one is best?
 
